@@ -5,34 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Fruit list</title>
 </head>
 <body>
+    
     <div class="container">
-    <h1>Fruit list</h1>
-    <div class="list">
-    <select  id="fruit" name="list">
+        <h1>Fruit list</h1>
+         <input type="text" id="list" onkeyup="myFruits()" placeholder="Search a fruit">
         
-    <option value="Pick a fruit"> Pick a fruit</option>
-   
-    <option value="gra">Grapes🍇 </option>
-   
-    <option value="mel">Melon🍈</option>
-    <option value="wat">Watermelon🍉</option>
-    <option value="tan">Tangerine🍊</option>
-    <option value="lem">Lemon🍋</option>
-    <option value="ban">Banana🍌</option>
-    <option value="pin">Pineapple🍍</option>
-    <option value="man">Mango🥭</option>
-    <option value="red">Red apple🍎</option>
-   
+    <ul id="fruits">
+      
+        <li><a href='#'>Banana🍌</a></li>
 
+        <li><a href='#'>Grapes🍇</a></li>
 
+        <li><a href ='#'>Lemon🍋</a></li>
 
+        <li><a href='#'>Mango🥭</a></li>
+        <li><a href='#'>Melon🍈</a></li>
+
+        <li><a href='#'>Pineapple🍍</a></li>
+
+        <li><a href='#'>Red apple🍎</a></li>
+
+        <li><a href='#'>Tangerine🍊</a></li>
+
+        <li><a href='#'>Watermelon🍉</a></li>
+    
+
+</ul>
+     
 </div>
-</div>
-            
     
 </body>
-<script>'index.js'</script>
+<script>'index.js'
+function myFruits() {
+    
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('list');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("fruits");
+    li = ul.getElementsByTagName('li');
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+
+
+</script>
+
+
 </html>
