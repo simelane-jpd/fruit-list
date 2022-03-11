@@ -1,10 +1,13 @@
-body , .list{
+body , .list, .link{
     font-family: cursive;
     background-color: #023047;
     color: #00f5d4;
     text-align: center;
 }
-#list {
+#addfruitbtn {
+  background-color: #e5989b;
+}
+#list  {
     background-image: url('/css/searchicon.png');
     background-position: 10px 12px; 
     background-repeat: no-repeat; 
@@ -12,17 +15,17 @@ body , .list{
     font-size: 20px; 
     padding: 12px 20px 12px 40px; 
     background-color: #e5989b;
-    color: #5a189a;
+    color:#00f5d4;
     
     
   }
-  #fruits {
+  #values {
    
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  #fruits li a {
+  #values li a {
     
     margin-top: -1px; 
     
